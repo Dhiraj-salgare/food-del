@@ -18,7 +18,7 @@ export default function StoreContextProvider(props){
     //token and set token 
     const [token,settoken]=useState("")
 
-    const url="https://food-delivery-backend1-riv6.onrender.com"
+    const url="https://food-del-nwzd.onrender.com"
     
     console.log("context token",token)
     const  addToCart=async(itemId)=>{
