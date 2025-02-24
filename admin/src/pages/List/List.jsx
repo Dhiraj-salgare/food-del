@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './List.css'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { data } from 'react-router-dom'
 
+import propTypes from 'prop-types'
 function List({url}){
 
     //create one list state
@@ -74,6 +74,10 @@ function List({url}){
         </div>
     )
 }
+
+List.propTypes = {
+    url: propTypes.string.isRequired, // url is required and should be a string
+  };
 
 
 export default List

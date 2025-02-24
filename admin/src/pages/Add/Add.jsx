@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './Add.css'
-import { assets, url } from '../../assets/assets';
+import { assets} from '../../assets/assets';
 import axios from 'axios'
 import toast from 'react-hot-toast';
-
+import propTypes from 'prop-types';
 
 function Add({url}){
 
@@ -109,5 +109,9 @@ function Add({url}){
         </div>
     )
 }
+
+Add.propTypes = {
+    url: propTypes.string.isRequired, // url is required and should be a string
+  };
 
 export default Add;

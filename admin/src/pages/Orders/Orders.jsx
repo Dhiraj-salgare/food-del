@@ -5,6 +5,7 @@ import './Orders.css'
 
 import '../../assets/assets'
 import { assets } from '../../assets/assets'
+import propTypes from 'prop-types'
 
 function Orders({url}){
 
@@ -13,7 +14,7 @@ function Orders({url}){
 
      console.log("orders",orders)
     const fetchorder=async()=>{
-        const response =await axios.get(url+"/api/order/list");
+        const response =await axios.get(`${url}/api/order/list`);
 
 
         if(response.data.success){
@@ -44,6 +45,9 @@ function Orders({url}){
         fetchorder()
     },[])
 
+
+
+    
     return (
         <div className='order add'>
              <h1>orders  Page</h1>
@@ -94,5 +98,9 @@ function Orders({url}){
         </div>
     )
 }
+
+Orders.propTypes = {
+    url: propTypes.string.isRequired, // url is required and should be a string
+  };
 
 export default Orders
